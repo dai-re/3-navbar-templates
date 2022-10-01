@@ -1,0 +1,166 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --logo: #C51212;
+  --bg: rgba(48, 49, 59, 1);
+}
+
+.nav_body {
+  width: 100%;
+  background: var(--bg);
+  padding: 8px 0px;
+  position: relative;
+
+}
+
+.nav_box {
+  margin: auto;
+  color: #fff;
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_box .logo {
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: 4px;
+  color: var(--logo);
+}
+
+.menu {
+  margin-top: -25em;
+  position: absolute;
+  right: 2px;
+  transition-duration: 1s;
+  z-index: 3;
+  opacity: 0;
+
+}
+
+.menu ul {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  padding: 8px;
+  align-items: center;
+  background: var(--bg);
+  border-radius: 5px;
+  gap: 10px;
+}
+
+.menu-active {
+  margin-top: 13em;
+  opacity: 1;
+
+}
+
+.menu ul li {
+  list-style: none;
+}
+
+.menu ul li:active {
+  color: var(--logo);
+}
+
+.menu ul li:nth-child(5) {
+  color: #fff;
+  font-weight: 500;
+  background: var(--logo);
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+
+.menu ul li:nth-child(5):hover {
+  background: #7A1717;
+}
+
+.menu ul li a {
+  color: unset;
+  text-decoration: none;
+}
+
+.hamburger {
+  position: absolute;
+  right: 10px;
+  z-index: 5;
+
+}
+
+@media only screen and (min-width: 480px) {
+  .nav_body {
+    width: 100%;
+    background: var(--bg);
+    padding: 10px;
+  }
+
+  .nav_box {
+    margin: auto;
+    color: #fff;
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav_box .logo {
+    font-weight: 900;
+    font-size: 20px;
+    letter-spacing: 4px;
+    color: var(--logo);
+  }
+
+  .menu {
+    margin-top: 0;
+    position: relative;
+    right: 2px;
+    z-index: 6;
+    opacity: 1;
+
+  }
+
+  .menu ul {
+    display: flex;
+    flex-direction: row;
+    right: 2px;
+    width: auto;
+    padding: 0;
+    align-items: center;
+    background: unset;
+    border-radius: 0;
+    gap: 10px;
+  }
+
+  .menu ul li {
+    list-style: none;
+  }
+
+  .menu ul li:active {
+    color: var(--logo);
+  }
+
+  .menu ul li:nth-child(5) {
+    color: #fff;
+    font-weight: 500;
+    background: var(--logo);
+    padding: 5px 8px;
+    border-radius: 5px;
+  }
+
+  .menu ul li:nth-child(5):hover {
+    background: #7A1717;
+  }
+
+  .menu ul li a {
+    color: unset;
+    text-decoration: none;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
